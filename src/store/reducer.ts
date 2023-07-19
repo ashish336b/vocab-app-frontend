@@ -1,7 +1,7 @@
-import counterSlice from "./counter/counterSlice";
+import authSlice from "./auth/authSlice";
 
 const reducer = {
-  counter: counterSlice.reducer,
+  auth: authSlice.reducer,
 };
 
 export default reducer;

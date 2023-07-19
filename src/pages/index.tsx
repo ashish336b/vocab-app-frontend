@@ -1,21 +1,17 @@
+import Guest from "@/hoc/Guest";
 import { Button } from "antd";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@/store";
-import counterSlice from "@/store/counter/counterSlice";
 
 const Home = () => {
-  const count = useSelector((state: RootState) => state.counter.value);
-  const dispatch = useDispatch();
-
   const add = () => {
-    dispatch(counterSlice.actions.incrementByAmount(10));
+    window.location.href = "http://localhost:3000/login/google";
   };
-  
+
   return (
-    <>
-      <Button onClick={add}>Increment</Button>
-      <p>{count}</p>
-    </>
+    <Guest>
+      <p className="text-center p-2 m-2">
+        <Button onClick={add}>Login With Google</Button>
+      </p>
+    </Guest>
   );
 };
 
