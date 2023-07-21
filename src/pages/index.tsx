@@ -3,7 +3,9 @@ import { Button } from "antd";
 
 const Home = () => {
   const add = () => {
-    window.location.href = "http://localhost:3000/login/google";
+    window.location.href = `${
+      import.meta.env.VITE_BACKEND_BASE_URL
+    }/login/google`;
   };
 
   return (
