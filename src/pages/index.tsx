@@ -5,7 +5,7 @@ const Home = () => {
   const add = () => {
     window.location.href = `${
       import.meta.env.VITE_BACKEND_BASE_URL
-    }/login/google`;
+    }/oauth/google`;
   };
 
   return (
